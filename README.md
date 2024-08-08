@@ -9,7 +9,7 @@
 - Biblioteca Aos.js
 
 <p align="center">
-  <img src="print-edunation.png">
+  <img src="/img/print-edunation.jpg">
 </p>
 
 ## Observações.
