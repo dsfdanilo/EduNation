@@ -1,0 +1,84 @@
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7.2rem;
+  background-color: transparent;
+  display: flex;
+  z-index: 1;
+  .container {
+    @include flex(row, center, space-between);
+    nav {
+      width: 100%;
+      max-width: 89.6rem;
+      @include flex(row, center, space-between);
+      ul {
+        @include flex(row, center, space-between);
+        li {
+          margin-right: 4.65rem;
+          &:last-child {
+            margin-right: 0;
+          }
+          a {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.6rem;
+            line-height: 1.9rem;
+            color: rgba(255, 255, 255, 0.7);
+            transition: color 0.3s;
+            &:hover {
+              color: $white;
+            }
+          }
+          img {
+            margin-left: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include responsive(1100px) {
+  header {
+    .container {
+      nav {
+        max-width: 60.6rem;
+      }
+    }
+  }
+}
+
+@include responsive(800px) {
+  header {
+    .container {
+      nav {
+        justify-content: flex-end;
+        ul {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@include responsive(480px) {
+  header {
+    .container {
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      .logo {
+        margin-top: 2rem;
+      }
+      nav {
+        button {
+          display: block;
+          margin: 0 auto;
+          margin-top: 4.8rem;
+        }
+      }
+    }
+  }
+}
